@@ -1,0 +1,42 @@
+﻿@page "/convert"
+
+<PageTitle>Counter</PageTitle>
+
+<div class="convert">
+
+<h1>Konvertera</h1>
+
+<h2>Från meter till fot</h2>
+<label for="meter">Skriv antal meter:</label>
+<input type="number" class="form-control" @bind="meter" />
+<br />
+<p> @meter meter är @feet feet</p>
+<button class="convertBtn" @onclick="Calculate">Räkna</button>
+
+<h2>Från km/h till miles/hour</h2>
+
+<label for="km">Skriv antal kilometer/h</label>
+<br><input type="number" class="form-control" @bind="km"/><br>
+<p> @km km/h är @miles miles/hour</p>
+<button class="convertBtn" @onclick="Calc">Räkna</button>
+</div>
+@code {
+   double meter;
+   double feet;
+   double km;
+   double miles;
+   
+
+   public void Calculate(){
+    Console.WriteLine("Calculate method called.");
+    feet = (double)(3.28 * meter); 
+     Console.WriteLine($"meter: {meter}, feet: {feet}");
+   }
+
+   public void Calc(){
+        Console.WriteLine("Convert method called.");
+    miles = (double)(0.62 * km);
+   }
+}
+
+

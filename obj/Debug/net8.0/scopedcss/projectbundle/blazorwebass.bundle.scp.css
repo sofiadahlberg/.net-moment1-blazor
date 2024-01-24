@@ -1,0 +1,55 @@
+/* /Layout/Footer.razor.rz.scp.css */
+/* Footer.razor.css */
+[b-fsvv03w1j4] .Footer {
+    background-color: rgb(202, 201, 201);
+    color: #000000;
+    text-align: center;
+    padding: 1%;
+     margin-top: 4%;
+    margin-bottom: 0; 
+}
+[b-fsvv03w1j4] .address{
+    background-color: rgb(202, 201, 201);
+}
+/* /Layout/MainLayout.razor.rz.scp.css */
+/* /Layout/NavMenu.razor.rz.scp.css */
+[b-rpv8wm84nv] .navlink {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px;
+    color: #000000;
+    border-right: #5e5d5e 0.5px solid;
+}
+
+[b-rpv8wm84nv] .navlink:hover {
+    text-decoration: underline;
+}
+[b-rpv8wm84nv] .navbar, [b-rpv8wm84nv] .nav-bar{
+    width: 100%;
+    
+}
+
+ .ulmenu[b-rpv8wm84nv] {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    background-color: rgb(202, 201, 201);
+    color: #000000;
+}
+
+[b-rpv8wm84nv].nav-item {
+    margin-right: 18px;
+   
+    text-decoration: none;
+}
+
+
+nav[b-rpv8wm84nv] {
+    background-color: rgb(202, 201, 201);
+    margin-bottom: 5%;
+}

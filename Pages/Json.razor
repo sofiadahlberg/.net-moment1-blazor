@@ -1,0 +1,48 @@
+@page "/json"
+@inject HttpClient Http
+
+<PageTitle>Json</PageTitle>
+<div class="jsonmain">
+    <h1>Inläst jsondata</h1>
+    <section>
+        <h2>Väderöversikt:</h2>
+        @if (weathers is not null)
+        {
+            @foreach (var weather in weathers)
+            {
+                <article>
+                    <h3>Date: @weather.date.ToShortDateString()</h3>
+                    <p>Temperature: @weather.temperatureC °C</p>
+                    <p>Weather feeling: @weather.summary</p>
+                </article>
+            }
+        }
+        else
+        {
+            <p>Loading..</p>
+        }
+    </section>
+</div>
+@code {
+    public WeatherView[]? weathers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            weathers = await Http.GetFromJsonAsync<WeatherView[]>("sample-data/weather.json");
+            Array.Empty<WeatherView>();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading JSON data: {ex.Message}");
+            weathers = Array.Empty<WeatherView>();
+        }
+    }
+    public class WeatherView
+    {
+        public DateTime date { get; set; }
+        public int temperatureC { get; set; }
+        public string? summary { get; set; }
+    }
+}

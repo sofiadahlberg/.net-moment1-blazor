@@ -1,0 +1,12 @@
+/* Footer.razor.css */
+::deep .Footer {
+    background-color: rgb(202, 201, 201);
+    color: #000000;
+    text-align: center;
+    padding: 1%;
+     margin-top: 4%;
+    margin-bottom: 0; 
+}
+::deep .address{
+    background-color: rgb(202, 201, 201);
+}
